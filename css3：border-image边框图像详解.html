@@ -1,0 +1,689 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript">
+		if (window.location.toString().indexOf("shtml?") > 0) {
+			self.location = window.location.toString().replace(window.location.search.toString(), "");
+		}
+		function doccheckart(json) {
+			if (json[0].result == "1") {
+				self.location = "http://www.360doc.com/noarticle.aspx";
+			}
+		}
+	</script>
+	<script src="http://blockart.360doc.com/ajax/getstatusv2.ashx?aid=417403574" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+        if (navigator.userAgent.indexOf("iPhone") > 0 || navigator.userAgent.indexOf("Android") > 0 || navigator.userAgent.indexOf("iPod") > 0) {  //手机端跳转
+        	var patt1 = new RegExp("[0-9]*_[0-9]*");
+        	var url = patt1.exec(location.href);
+        	if (url != "") {
+        		self.location = "http://www.360doc.cn/article/" + url + ".html";
+        	}
+        }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="360doc" name="classification" /><link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.360doc.cn/article/2792772_417403574.html"/><meta content="border,px,边框" name=keywords><meta content="css3：border-image边框图像详解" name=description><meta name="mobile-agent" content="format=html5;url=http://www.360doc.cn/article/2792772_417403574.html"/><meta content="边框图片宽度border-image-width.}/*拉伸*/.border-image-repeat{ border:27px solid #000; border-image-source:url(http://img.xiaoho.com/2014/09/border.png);border-image-slice:27 27 27 27;border-image-repeat:repeat;}/*重复*/.border-image-round{ border:27px solid #000; border-image-source:url(http://img.xiaoho.com/2014/09/border.png);border-image-slice:27 27 27 27;border-image-repeat:round;}/*环绕*/" name=360docabstract><meta content="www.360doc.com" name="author" /><title>
+    css3：border-image边框图像详解
+</title>
+<script type="text/javascript" language="javascript">
+	window.onerror = ignoreError;
+	function ignoreError() {
+		return true;
+	}
+</script>
+<script src="/js/indexhead.js?t=20160421" type="text/javascript" charset="utf-8"></script>
+<script src="/js/showarticlefollow20160329.js?t=2016041901" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.360doc.com/js/jQuery.md5.min.js?t=2016041501" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var _hmt = _hmt || [];
+	(function () {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?d86954201130d615136257dde062a503";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<link rel="stylesheet" type="text/css" href="http://css.360doc.com/wzhead-cleaned.css?t=2016040801" /><link rel="stylesheet" type="text/css" href="http://css.360doc.com/newArticle20160509.css?t=2016051701" /></head>
+<body onmouseup="setDragEnd()" onclick="delAllDiv(event)">
+	<script type="text/javascript">
+		var baiduImagePlus = {
+			noLogo: true,
+			unionId: 'u2617463',
+			maxMiniAdCount: 0,
+			formList: [{ formId: 10 }]
+		};
+	</script>
+	<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/i.js"></script>
+	<span id="LayerLogin"></span>
+	<div style="position: fixed; width: 100%; z-index: 2147483647; left: 0;">
+		<div class="mainnav">
+			<div class="mainnav1">
+				<div class="lf360" style="padding-left: 5px;">
+					<a href="http://www.360doc.com/index.html">
+						<img src="http://pubimage.360doc.com/newsite/logoo.gif" /></a>
+					</div>
+					<div style="width: 625px; padding-top: 0px; padding-left: 4px; position: absolute;">
+						<table height="34" border="0" cellspacing="0" cellpadding="0">
+							<tbody>
+								<tr id="daohangtr">
+									<td style="width: 185px; _width: 0px; *width: 0px !important;"></td>
+									<td class="navwz1" width="95">
+										<a href="http://www.360doc.com/index.html">首&nbsp;页</a>
+									</td>
+									<td width="100" class="  navwz1">
+										<a href="http://www.360doc.com/readroom.html">阅览室</a>
+									</td>
+									<td width="88" class="  navwz1">
+										<a href="http://www.360doc.com/weekstar.html">馆友</a>
+									</td>
+									<td width="132" class="  navwz1">
+										<a href="http://www.360doc.com/my360doc.aspx">我的图书馆</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="rt360" style="padding-top: 6px; width: 133px; padding-left: 38px;" id="outerdiv">
+					</div>
+					<div class=" rt360" style="padding-top: 6px; padding-right: 0px;">
+						<div class="lf360 serch">
+							<input name="input2" class="serchpt" id="txtSearchword" onkeydown="ongosearch()" onkeyup="showIntelliSense()" onfocus="if(this.value=='搜文章 找馆友') this.value='';this.style.color='#272727'" onblur="if(!this.value) {this.value='搜文章 找馆友';this.style.color='#b2b2b2';}" onpaste="showIntelliSense1()" type="text" value="搜文章 找馆友" />
+						</div>
+						<div class="lf360 ssuo">
+							<a id="searchlinkid" href="javascript:gosearch();"></a>
+						</div>
+						<div id="divsearch" style="margin-top: 25px; margin-left: 1px; display: block; position: absolute; z-index: 100;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navxt">
+			</div>
+		</div>
+		<div style="height: 44px; _height: 0px; width: 100%;"></div>
+		<div class="both"></div>
+		<div class="doc360article_content">
+			<div style="height: 90px; padding-top: 13px;">
+				<div id="ADAboveArtContent">
+				</div>
+			</div>
+			<p class="clearboth"></p>
+			<div class="a_left">
+				<div id="bgchange">
+					<div class="fontsize_bgcolor_controler">
+						<div class="a_bgcolor">
+							<img src="http://pubimage.360doc.com/NewArticle/bgcolor.jpg" />
+							<div class="a_colorlist">
+								<span class="a_color1" onclick="wzhitnew(18);">
+									<img src="http://pubimage.360doc.com/NewArticle/yes.gif" /></span>
+									<span class="a_color2" onclick="wzhitnew(19);">
+										<img src="http://pubimage.360doc.com/NewArticle/yes.gif" /></span>
+										<span class="a_color3" onclick="wzhitnew(20);">
+											<img src="http://pubimage.360doc.com/NewArticle/yes.gif" /></span>
+											<span class="a_color4" onclick="wzhitnew(21);">
+												<img src="http://pubimage.360doc.com/NewArticle/yes.gif" /></span>
+												<span class="a_color5" onclick="wzhitnew(22);">
+													<img src="http://pubimage.360doc.com/NewArticle/yes.gif" /></span>
+													<span class="a_color6 cur" onclick="wzhitnew(23);">
+														<img src="http://pubimage.360doc.com/NewArticle/yes.gif" /></span>
+													</div>
+												</div>
+												<div class="a_fontsize">
+													<img src="http://pubimage.360doc.com/NewArticle/fontSize.jpg" />
+													<div class="fschange">
+														<label>
+															<input type="radio" name="font_Size" id="" value="18" onclick="wzhitnew(15);" />大
+														</label>
+														&nbsp;
+														<label>
+															<input type="radio" name="font_Size" id="" value="16" onclick="wzhitnew(16);" />中
+														</label>
+														&nbsp;
+														<label>
+															<input type="radio" name="font_Size" id="" value="14" onclick="wzhitnew(17);" />小
+														</label>
+													</div>
+												</div>
+											</div>
+											<h2 id="titiletext">css3：border-image边框图像详解</h2>
+											<div class="article_data">
+												<div class="article_data_left">
+													2014-10-16
+													<span class="a_username">&nbsp;<a href="http://www.360doc.com/userhome/2792772" id="savernickname" target="_blank" onclick="wzhitnew(1);">小小小舟</a>
+													</span>
+													<span id="articleinfo">
+														<span id="docsource" class="a_from"></span><span id="360doc_Readnum"></span><span id="360docResaveCount"><span onclick="ShowSaverUser();wzhitnew(3);" id="360doc_saverNum" style="cursor: pointer;"></span>
+														<span id="360doc_saverUser">
+															<div style="position: absolute; height: 305px; width: 144px; left: 0px; z-index: 2;" id="sameArtOuter">
+																<div onclick="event.cancelBubble=true;" style="overflow-y: auto; height: 300px; overflow-x: hidden; z-index: 100; right: 0px; margin-top: -10px;" id="sameArt">
+																</div>
+															</div>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div id="resavelayer1" class="bdsharebuttonbox article_data_right">
+											</div>
+										</div>
+										<div id="articlecontent" class="article_container" onmousedown="newhighlight = true;" onmouseup="NewHighlight(event);">
+											<table>
+												<tbody>
+													<tr>
+														<td id="artContent" width="656">
+															<div><span style="line-height: 1.5;">自我介绍</span></div>
+															<p>hello，大家好，我叫小黑，也叫xiaoho，目前喜欢并从事写页面。因为不喜欢在那些类似BBS型的论坛上发帖，所以之前在<a href="http://www.html-js.com/user" target="_blank">html-js</a>上发表几篇戳文，现在申请了前端观察打字员，在这里谢谢神飞童鞋，虽然我不懂他是干嘛的~不过为什么选择在这里发表文章的缘由就是下面这句话：</p>
+															<blockquote><p>向来中国的前端开发领域，就像一盘散沙一样，每个人每个站都各自为营，高手就像就像天空的星星一样多，但是他们的成就却很少广为传播，初学者却苦于在大海一样的设计中寻找自己的参考。</p></blockquote>
+															<p>我非圣人，我只是把我自己所学所想的表达出来，毕竟个人想法有限，假如有悖论或者冒犯之处，还请拍砖，大家一起在争论中提高。还有，也许你们可能也会奇怪，为什么网上有这么一大把的学习的文章，类似的文章还要自己写出来，我的个人想法是：只有自己亲自去实践过才有发言权。<br>
+																那么问题来了：怎么对我的言语进行反驳呢？在评论中猛戳！</p>
+																<h3>前言</h3>
+																<p>对于这个border-image属性已经不是什么新奇的事情了，也是一个老生长谈的话题。这是属性从很多年前已经出现了，但一直形单影只的，似乎不被看好，但是假如你对此深入研究之，想必其用处还是多多，不过很可惜到目前为止对于浏览器支持还不比其他css3属性多，特别是IE，只有IE11以上才支持，详情请移步 <a href="http://caniuse.com/#search=border-image" target="_blank">border-image兼容性</a>。不过很好，对于纯正的现代浏览器和移动浏览器支持度还是非常牛逼哄哄的，所以今天就来详解一下这个属性的各个值。</p>
+																<h3>border-image摘要</h3>
+																<p>其实我[border-image属性]是用来给元素边框添加背景图像，在某些时候，利用这个 <code>border-image</code> 可以轻松绘制一些比较复杂的小部件。并且我是 <code>border-image-source</code> <code>border-image-slice</code> <code>border-image-width</code><code>border-image-outset</code><code>border-image-repeat</code> 的简写值。只不过为了方便简写，毕竟你懂得，我们家族 <code>border-*</code> 都是有简写值，假如作为新生儿没有，那看的人估计都醉了。<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_1.gif"></p>
+																<p>哦，对了，忘记跟你说了，我的作用就是用来代替 <code>border-style</code> 值的。值得注意的是假如 <code>border-image</code> 值是none的话，那么背景图像将不会显示，同时， 将会显示<code>border-style</code>的值。 那么我的详细简写值如下所示：</p>
+																<table>
+																	<tbody>
+																		<tr>
+																			<th>属性名称:
+																			</th>
+																			<td><dfn>border-image</dfn>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>值:
+																			</th>
+																			<td> &lt;‘border-image-source’&gt; || &lt;‘border-image-slice’&gt; [ / &lt;‘border-image-width’&gt; | /<br>
+																				&lt;‘border-image-width’&gt;? / &lt;‘border-image-outset’&gt; ]? ||&lt;‘border-image-repeat’&gt;
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>初始值:
+																			</th>
+																			<td>详见各个属性
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>应用于:
+																			</th>
+																			<td>所有元素，除表单元格 border-collapse 是 collapse外.
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>是否继承:
+																			</th>
+																			<td>否
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>百分比:
+																			</th>
+																			<td>N/A
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>媒体:
+																			</th>
+																			<td>visual
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>计算值:
+																			</th>
+																			<td>详见各个属性
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>动画:
+																			</th>
+																			<td>详见各个属性
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<p>所以，我的完整写法是</p>
+																<pre>  .border-image-all{ border:27px solid #000; border-image:url(http://img.xiaoho.com/2014/09/border.png) 27 27 27 27 fill/27 27 27 27/27px 27px 27px 27px repeat;}
+																</pre>
+																<p>如你所见，这正是我的一个简写值。请不要头晕哦，虽然是一长串的各种英文单词，但是你对我恐怕也不陌生哒<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_2.gif" alt="QQ表情可爱">，想想css属性当中有哪些是跟图片相关的，反正我是想到了 <code>background</code> 属性值了。css当中引入图像的属性的属性值不外乎有：图片地址<code>background-image</code>、图片重复<code>background-repeat</code>、图片平铺方式<code>background-attachment</code>等。因此对于边框图像也是大同小异滴啦。下面我们就一一分析这些单独的属性值。<br>
+																	<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_3.gif"> </p>
+																	<p>border-image有六大属性值，分别是：图片地址<strong>border-image-source</strong>、图片切片<strong>border-image-slice</strong>、图片宽度<strong>border-image-width</strong>、图片外凸<strong>border-image-outset</strong>、图片重复<strong>border-image-repeat</strong></p>
+																	<h3>图片地址border-image-source</h3>
+																	<table>
+																		<tbody>
+																			<tr>
+																				<th>属性名称:
+																				</th>
+																				<td><strong>border-image-source</strong>
+																				</td>
+																			</tr>
+																			<tr>
+																				<th>值:
+																				</th>
+																				<td>none | &lt;image&gt;
+																				</td>
+																			</tr>
+																			<tr>
+																				<th>初始值:
+																				</th>
+																				<td>none
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<p>我叫引入图片地址属性，我这个属性的属性值是比较好理解滴，因为就只有两个属性值嘛，初始值是none，假如设置了none，那么我们的盒子边框就会应用 <code>border-style</code> 的值；假如你想要设置一个外部链接地址的图片进来那么代码可以直接写到：</p>
+																	<pre>.border-image{ 
+																		border:20px solid #000; 
+																		border-image-source:url(border.png); //目测我会长得很丑比 ~ .~，不信你试试
+																	}
+																</pre>
+																<h3>图片切片border-image-slice</h3>
+																<table>
+																	<tbody>
+																		<tr>
+																			<th>属性名称:
+																			</th>
+																			<td><strong>border-image-slice</strong>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>值:
+																			</th>
+																			<td>[&lt;number&gt; | &lt;percentage&gt;]{1,4}<br>
+																				&amp;&amp; fill?
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>初始值:
+																			</th>
+																			<td>none
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<p>我叫border-image-slice，指定边框图像顶部、右侧、底部、左侧内偏移量。我的没有具体的单位值，比如像px、em统统不能应用在我身上，你只要给我一个单纯的数字即可，当然了你也可以按照百分比来给我设置滴啦。我的作用就是把边框图像切成9个区域：4个角、4边区域和一个中间部位，前辈们都谦虚称作9宫格，但是我悄悄跟你说哦，假如说不应用fill这个可选属性值的话，那么中间第九块格子被当做透明不见，相当于中间那块被哪条狗吃了呢！</p>
+																<p>第一个值为number，即纯数字作为单位计量，如1,2,3…；第二个值为percentage，即百分比作为单位；{1,4}表示前面的数字最少出现一次，最多出现4次，如 <code>border-image-slice:27</code> <code>border-image-slice:27 27</code> <code>border-image-slice:27 27 27</code> <code>border-image-slice:27 27 27 27</code> 都是可以的，这个和<code>margin</code>的值大同小异，假如你还不懂这些缩写值具体代表什么，那么你不妨去看看前段时间写的一篇关于<a href="http://xiaoho.com/?p=660">margin的简写值</a>，fill为可选属性值，假如指定，那么中间第九块不是透明块，假如不指定，那么为透明图片处理。</p>
+																<p>你们一定是很好奇，我具体是怎么工作机制的呢，就算csser指定了几个数字上去，但是压根就不懂他是怎么工作的，那就呵呵啦。所以下面带来详解：</p>
+																<p>图片用了w3c指定专用产品~一个81px的正方形位图，9个菱形图案，每个菱形图案为27*27px<br>
+																	<img src="https://mdn.mozillademos.org/files/4127/border.png"> <br>
+																	左上角、右上角、右下角、左下角为4个橙色菱形，顶部区域、右侧区域、底部区域、左侧区域为4个土黄菱形，中间块（贱称第九区）为透明块。刚刚也说过了，这个border-image-slice就是一个切片的作用，把图像直接切开，中间不留痕迹，假如给定这个属性值：<code>border-image-slice:27 27 27 27</code> 那么它代表的意思是距离顶部内偏移区域27px处横切一刀</p>
+																	<p><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_4.png" alt="border-image-slice"></p>
+																	<p>接着距离右侧内偏移区域27px竖切一刀<br><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_5.png" alt="border-image-slice"></p>
+																	<p>紧接着距离底部内偏移区域27px横切一刀<br><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_6.png" alt="border-image-slice"></p>
+																	<p>接着距离左侧内偏移区域27px竖切一刀<br><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_7.png" alt="border-image-slice"></p>
+																	<p>那么给定图像切片<code>border-image-slice:27 27 27 27</code>完整动态图如下：<br>
+																		<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_8.gif" alt="border-image-slice">
+																	</p>
+																	<p>这几刀下来把我分成了9个部分，因此我被9宫格也就此由来<br>
+																		<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_9.png" alt="border-image-slice.png"> </p>
+																		<p>所以被切割的部位都分布在盒子边框这9个地方，如上所示。对应的，被分隔的图像只能在边框宽度（border-width）内活动，什么意思呢，比如盒子边框为<code>border-width:54px</code> 分割图片为<code>border-image-slice:27</code>，因为图像4个顶角的宽度和高度都只有27px，但是盒子的边框是54px，因此图片就要被水平方向和垂直方向拉伸到切好跟盒子边框宽度等同，即27px的图像拉伸到54px停止，再往前就不行了！这点上，跟 <a href="http://www.zhangxinxu.com/wordpress/?p=518" target="_blank">鑫哥</a> 的解释有点不太一样，因为他觉得这个是视觉中盲点，被分隔的顶角图像只是分配到边框的4个顶角，不会平铺，不会重复、不会拉伸（这点跟我说得不符合），引用原文如下：</p>
+																		<blockquote><p>
+																			橙红色的四个边角的菱形区域称为“角边框图片”，在border-image中，角边框图片是没有任何展示效果的，不会平铺，不会重复，也不会拉伸，有点类似于视觉中盲点的意思。
+																		</p></blockquote>
+																		<p>为了证明我的观点，我用了两个demo来展示一下，</p>
+																		<p><strong>demo1：</strong>当盒子边框宽度比被切图片边框大的时候，如下代码</p>
+																		<pre>.border-image{ 
+																			border:54px solid #000;  //盒子边框为54px
+																			border-image-source:url(border.png); 
+																			border-image-slice:27 27 27 27; //边框图片被切成9个区域，其中4个顶角的大小为 27*27px
+																		}
+																	</pre>
+																	<p><strong>效果：</strong></p>
+																	<p><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_10.png" alt="border-image-slice"></p>
+																	<p>对此我的理解是如下步骤：<br><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_11.png" alt="border-image-slice"><br>
+																		详情请点击：<a href="http://xiaoho.com/demo/201409/border-image-demo1.html">slice切片的值比边框宽度大 </a></p>
+																		<p>
+																			<p><strong>demo2：</strong>当盒子边框宽度比被切图片边框小的时候，如下代码</p>
+																			<pre>.border-image{ 
+																				border:14px solid #000;  //盒子边框为14px
+																				border-image-source:url(border.png); 
+																				border-image-slice:27 27 27 27; //边框图片被切成9个区域，其中4个顶角的大小为 27*27px
+																			}
+																		</pre>
+																		<p><strong>效果：</strong></p>
+																		<p><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_12.png" alt="border-image-slice"></p>
+																		<p>对此我的理解是如下步骤：<br><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_13.png" alt="border-image-slice"><br>
+																			详情请点击：<a href="http://xiaoho.com/demo/201409/border-image-demo2.html">slice切片的值比边框宽度小 </a></p>
+																			<p>因此，我所了解的四个顶角的变化其实是带有拉伸功能的，当然假如说盒子边框和被切图片宽度相等，那么这样就不会有拉伸的效果。</p>
+																			<p><strong>说说fill值</strong><br>
+																				fill值是一个可选属性值，假如指定这个值，那么第九区就会出现，假如不指定，那么第九区就被外星人攻占，隐藏起来！（楼下会有demo↓）<br>
+																				<strong>两点注意：</strong><br>
+																				1、slice不允许设置负值，设置负值和设置大于盒子的高度或者宽度都被100%，（楼下有demo↓）<br>
+																				2、slice切过的区域有可能会重叠，如果右切和左切的值之和≥盒子的宽度，那么顶部区域(5号)和底部区域（7号）为空白（楼下有demo↓），反之亦然。<br>
+																				更多详情，请各位爷轻戳：<a href="http://xiaoho.com/demo/201409/border-image-note.html">demo</a> <br>
+																				移动端的童鞋请拿出你们的手机扫一扫~~<br>
+																				<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_14.png" alt="border-image-slice">
+																			</p>
+																			<p>能不能控制图片边框的宽度，而不是每次都要调试盒子边框宽度？当然是有，下面就来介绍这个<code>border-image-width</code>这个可选属性值</p>
+																			<p>
+																				<h3>边框图片宽度border-image-width</h3>
+																				<table>
+																					<tbody>
+																						<tr>
+																							<th>属性名称:
+																							</th>
+																							<td><strong>border-image-width</strong>
+																							</td>
+																						</tr>
+																						<tr>
+																							<th>值:
+																							</th>
+																							<td>[ &lt;length&gt; | &lt;percentage&gt; | &lt;number&gt; | auto ]{1,4}</td>
+																						</tr>
+																						<tr>
+																							<th>初始值:
+																							</th>
+																							<td>1</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<p>我叫border-image-width，我的作用就是代替盒子本身的边框宽度border-width。假如指定，那么边框图片宽度就由我来做主，假如不指定，那么图片边框宽度就由盒子的边框宽度来固定。我可以用具体像素、数字（表示几倍）和百分比来表示，最少1个值，最多4个值，分别代表上右下左图片边框宽度，注意哦，相关代码如下：</p>
+																				<pre>.border-image{ 
+																					border:20px solid #000;  //盒子边框宽度为20px
+																					border-image-source:url(border.png); 
+																					border-image-width:27px 1 10% 27px; //边框图片宽度设置为top:27px,right:1倍,bottom:10%,left:27px，因此这些值将代替20px成为图片边框宽度。
+																				}
+																			</pre>
+																			<p>
+																				<h3>边框图片外凸border-image-outset</h3>
+																				<table>
+																					<tbody>
+																						<tr>
+																							<th>属性名称:
+																							</th>
+																							<td><strong>border-image-outset</strong>
+																							</td>
+																						</tr>
+																						<tr>
+																							<th>值:
+																							</th>
+																							<td>[ &lt;length&gt; | &lt;number&gt; ]{1,4}</td>
+																						</tr>
+																						<tr>
+																							<th>初始值:
+																							</th>
+																							<td>0s</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<p>我叫border-image-outset，我的作用就让边框背景延伸到盒子外。有两个属性值length和number，前者是具体的像素单位，后者是数字，最少1个值，最多4个，分别代表上右下左图片边框向外延伸的距离，相关代码如下：</p>
+																				<pre>.border-image{ 
+																					border:27px solid #000;  //盒子边框宽度为27px
+																					border-image-source:url(border.png); 
+																					border-image-outset:27px 27px 27px 27px; //边框图片向设置为27px，那么背景图将会从盒子最外边界向外上右下左各延伸27px。
+																				}
+																			</pre>
+																			<p><img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_15.png" alt="border-image-outset延伸之前和延伸之后"></p>
+																			<p>
+																				<h3>边框图片重复border-image-repeat</h3>
+																				<table>
+																					<tbody>
+																						<tr>
+																							<th>属性名称:
+																							</th>
+																							<td><strong>border-image-repeat</strong>
+																							</td>
+																						</tr>
+																						<tr>
+																							<th>值:
+																							</th>
+																							<td>[ stretch | repeat | round ]{1,2}</td>
+																						</tr>
+																						<tr>
+																							<th>初始值:
+																							</th>
+																							<td>stretch</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<p>我叫border-image-repeat，顾名思义，我的作用就让边框背景是否重复，默认值为stretch，是拉伸的意思，4个角4个区域分别做水平和垂直方向的拉伸，来填补边框的间隙；repeat是就是让4个角4个区域做完水平和垂直方向的复制图像，做CTRL+V运动，把边框之间的空隙填满；而round[环绕]是把4个角和4个区域分成均等区域，然后用背景图片切好能铺满整个边框空隙，不能多也不能少，正好合适。听说下面有demo↓：</p>
+																				<pre>.border-image-stretch{ 
+																					border:27px solid #000; 
+																					border-image-source:url(http://img.xiaoho.com/2014/09/border.png);
+																					border-image-slice:27 27 27 27;
+																					border-image-repeat:stretch;
+																				}/*拉伸*/
+																				.border-image-repeat{ 
+																				border:27px solid #000; 
+																				border-image-source:url(http://img.xiaoho.com/2014/09/border.png);
+																				border-image-slice:27 27 27 27;
+																				border-image-repeat:repeat;
+																			}/*重复*/		
+																			.border-image-round{ 
+																			border:27px solid #000; 
+																			border-image-source:url(http://img.xiaoho.com/2014/09/border.png);
+																			border-image-slice:27 27 27 27;
+																			border-image-repeat:round;
+																		}/*环绕*/
+																	</pre>
+																	<p>效果如下：<br>
+																		<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_16.png" alt="border-image-repeat">
+																	</p>
+																	<p>可以点击这里查看完整：<a href="http://xiaoho.com/demo/201409/border-image-repeat.html">边框图片重复属性值</a><br>
+																		手机的童鞋可以拿出手机来扫~~<br>
+																		<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_17.png" alt="border-image-repeat">
+																	</p>
+																	<h3>应用</h3>
+																	<p>对于应用来说，这个边框图片太强大了的，随便一折腾就可以弄出奇形怪状的边框来，使得边框不在拘泥于那些传统的线框。不管你是调slice值，还是repeat值、或者是outset值都可以变化很多新花招，刚刚我们其实在做demo展示的时候已经展现出来，那么下面我就用来一个一张图片构造最简单的我们的圆弧长方形。<br>
+																		用到图片：<br>
+																		<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_18.png" alt="border-image-repeat"><br>
+																		效果如下：<br>
+																		<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_19.png" alt="border-image-repeat"><br>
+																		更多详细demo，请点击：<a href="http://xiaoho.com/demo/201409/border-image-alldemo.html">仅仅是图片宽度改变demo展示</a>
+																	</p>
+																	<h3>结语</h3>
+																	<p>好了，就这么多了，这个属性目前对于IE来说真是渣渣，但是手机端上的兼容性还是非常友好的，假如你不想用老旧的线来构造一个边框的话，那么就换一张图片来构造丰富的边框样式吧，你会发现，css3的世界真是非常强大的。<br>
+																		预祝各位国庆愉快，希望29号回去路上不堵车，今年国庆要交份子钱的童鞋，请默默地点个赞，然后在评论中说出你的观点。<br>
+																		<img src="http://image79.360doc.com/DownloadImg/2014/10/1613/46176269_20.gif" alt="抛菊花"> </p>
+																		<p>本文地址：<a href="http://xiaoho.com/?p=784" target="_blank">http://xiaoho.com/?p=784</a></p>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<div id="viewerPlaceHolder" style="width: 717px; height: 700px; display: none; margin: 0 auto;">
+														</div>
+													</div>
+													<table>
+														<tbody>
+															<tr>
+																<td>
+																	<ul></ul>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													<div></div>
+													<span></span>
+													<a></a>
+													<p style="margin: 0; padding: 0;"></p>
+													<p class="clearboth"></p>
+													<div class="bdsharebuttonbox bottombtn">
+														<div class="zcommond" style="overflow: visible;">
+															<a href="javascript:void(0);" class="btn_collect" onclick="SaveArt();wzhitnew(26);">转藏到我的图书馆</a>
+															<a id="flowimg3" href="javascript:void(0);" class="btn_good" onclick="Showflowerlayer('sendedLayer1');wzhitnew(27);">献花（<span id="articleflowernum">0</span>）
+																<span id="flowernumadd" style="display: none;">+1</span>
+															</a>
+															<span class="span1 f_left" onclick="setTimeout(function(){$('.bottombtn .sharelist_new').slideToggle(0);},10);wzhitnew(33);" onmouseover="this.style.color='#0f659c'" onmouseout="this.style.color=''">分享：</span>
+															<a class="sharewx f_left" href="javascript:void(0);" onclick="shareWeixin();wzhitnew(64);">微信</a>
+															<div class="s2 f_left" onclick="setTimeout(function(){$('.bottombtn .sharelist_new').slideToggle(0);},10);wzhitnew(34);"><span></span></div>
+														</div>
+														<div class="sharelist_new" id="fenxiangLayer2">
+															<a class="slbg1" href="javascript:void(0);" data-cmd="qzone" onclick="wzhitnew(13);">QQ空间</a>
+															<a class="slbg2" href="javascript:void(0);" data-cmd="sqq" onclick="wzhitnew(7);">QQ好友</a>
+															<a class="slbg3" href="javascript:void(0);" data-cmd="tsina" onclick="wzhitnew(55);">新浪微博</a>
+															<a class="slbg4" href="javascript:void(0);" data-cmd="tqq" onclick="wzhitnew(56);">腾讯微博</a>
+															<a class="slbg5" href="javascript:void(0);" onclick="showdivemail1();wzhitnew(35);">推荐给朋友</a>
+														</div>
+													</div>
+													<div class="bottom_controler">
+														<p class="bottom_cleft">
+															来自：
+															<span class="a_username" style="width: auto;" onclick="wzhitnew(59)">
+																<a href="http://www.360doc.com/userhome/2792772" id="savernickname2" target="_blank">小小小舟</a>
+															</span>
+															&gt;
+															<span id="cname" class="a_from" onclick="wzhitnew(60)"></span>
+														</p>
+														<div class="bottom_cright">
+															<a href=" https://www.baidu.com/s?wd=border+px+%e8%be%b9%e6%a1%86&tn=SE_hldp01010_6r0gix1f" target="_blank" class="a1" onclick="wzhitnew(100);">以文找文</a>
+															&nbsp;&nbsp;|&nbsp;&nbsp;
+															<a href="javascript:void(0);" class="a2" onclick="showAlertLayer1();wzhitnew(36);">举报</a>
+														</div>
+													</div>
+													<div class="prev_next">
+														<p id="lastart" class="p1">
+														</p>
+														<p id="nextart" class="p2">
+														</p>
+													</div>
+												</div>
+												<p class="clearboth"></p>
+												<div style="width: 676px; float: left;">
+													<div class="str_border" style="border: none; position: relative; z-index: 2;">
+														<strong>猜你喜欢</strong>
+													</div>
+													<ul class="youlike" style="margin-top: -18px; position: relative; z-index: 1;">
+														<iframe id="youlikead" style="width: 676px; height: 280px; border: 0;" frameborder="0" scrolling="no"></iframe>
+													</ul>
+													<div class="zcommond" style="padding: 10px 0 20px;">
+														<div class="bottom_article f_left">
+															<div class="str_border">
+																<strong>类似文章</strong>
+																<a href=http://www.360doc.com/relevant/417403574_more.shtml target='_blank' class='a_more f_right' onclick='wzhitnew(38)'>更多</a>
+															</div>
+															<ul class="barticle_list">
+																<li><span><a href=http://www.360doc.com/content/14/1127/22/16800134_428607927.shtml target=_blank onclick='wzhitnew(37)'>css背景图片的设置</a></span></li>
+																<li><span><a href=http://www.360doc.com/content/15/0413/20/9322809_462974863.shtml target=_blank onclick='wzhitnew(37)'>万能词典</a></span></li>
+																<li><span><a href=http://www.360doc.com/content/15/1021/04/9731268_507208558.shtml target=_blank onclick='wzhitnew(37)'>日本是个“超级可怕”的民族</a></span></li>
+																<li><span><a href=http://www.360doc.com/content/16/0113/15/13247663_527608893.shtml target=_blank onclick='wzhitnew(37)'>用CSS边框图像让你的网站更漂亮</a></span></li>
+																<li><span><a href=http://www.360doc.com/content/13/1109/21/3959512_328001589.shtml target=_blank onclick='wzhitnew(37)'>Photoshop从头学起?(01-84集）</a></span></li>
+																<li><span><a href=http://www.360doc.com/content/14/0121/14/15428158_346882206.shtml target=_blank onclick='wzhitnew(37)'>Table的border属性与css border</a></span></li>
+																<li><span><a href=http://www.360doc.com/content/11/0417/03/6037420_110196099.shtml target=_blank onclick='wzhitnew(37)'>水中花【边框+文字竖列特效】 -</a></span></li>
+																<li><span><a href=http://www.360doc.com/content/12/0502/08/7345255_208020362.shtml target=_blank onclick='wzhitnew(37)'>腕脉敷姜药 迅速退高烧</a></span></li>
+															</ul>
+														</div>
+														<div class="bottom_article f_right">
+															<div class="str_border">
+																<strong>精选文章</strong>
+															</div>
+															<ul class="barticle_list">
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/13/0121/09/8176916_261501963.shtml target=_blank onclick='wzhitnew(37)'>各类服装存放保养方法</a></span></li>
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/13/1223/08/1938361_339403425.shtml target=_blank onclick='wzhitnew(37)'>治疗肺癌的小偏方</a></span></li>
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/14/1117/16/6948999_425808115.shtml target=_blank onclick='wzhitnew(37)'>神奇的心脑血管疾病根治法</a></span></li>
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/15/1222/15/974066_522285854.shtml target=_blank onclick='wzhitnew(37)'>鲁迅妙语30则，犀利！</a></span></li>
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/13/1126/10/5473201_332231396.shtml target=_blank onclick='wzhitnew(37)'>吃透三句话你也能成为百万富翁</a></span></li>
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/13/1205/10/258501_334610936.shtml target=_blank onclick='wzhitnew(37)'>小游戏: 坦克军事越野</a></span></li>
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/14/0304/17/14492958_357698966.shtml target=_blank onclick='wzhitnew(37)'>宠物对人运势影响</a></span></li>
+																<li><span><a onclick="wzhitnew(40);" href=http://www.360doc.com/content/15/1004/15/18948114_503230523.shtml target=_blank onclick='wzhitnew(37)'>民间相面顺口溜</a></span></li>
+															</ul>
+														</div>
+													</div>
+													<iframe id="underZcommondAd" style="width: 676px; height: 202px;" frameborder="0" scrolling="no"></iframe>
+													<div class="zcommond" style="margin-top: 10px;">
+														<div class="f_left" style="width: 300px; height: 90px;">
+															<iframe id="aboveReflectionAd1" frameborder="0" scrolling="no"></iframe>
+														</div>
+														<div class="f_left" style="width: 300px; height: 90px; margin-left: 44px;">
+															<iframe id="aboveReflectionAd2" frameborder="0" scrolling="no"></iframe>
+														</div>
+													</div>
+													<p></p>
+													<div id="ReflectionPart">
+														<div style="height: 156px; margin: 0px 0px;">
+															<div class="plbox">
+																<div class="plmain">
+																	<div class="titwx" style="height: 23px;">
+																		发表评论：
+																	</div>
+																	<textarea name="SendRefTB" id="SendRefTB" style="width: 100%; height: 75px; border: 1px solid #e7e7e7; background-color: #fff; overflow: auto; font-size: 12px;" onfocus="testContent(1);" onblur="testContent(2)"></textarea>
+																	<div style="text-align: right; padding-right: 3px; padding-top: 6px;">
+																		<div class="huifubt">
+																			<a id="ImgSendPL" href="javascript:void(0);" onclick="SubmitReflection();wzhitnew(50);"></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div style="padding-top: 15px; padding-left: 15px;" id="Reflction">
+													</div>
+												</div>
+											</div>
+											<div class="a_right">
+												<div class="user_info">
+													<div class="user_photo f_left">
+														<p class="user_photopic">
+															<a href="http://www.360doc.com/userhome/2792772" id="userphotourl" target="_blank" onclick="wzhitnew(28);">
+																<img src="http://pubimage.360doc.com/head/001.gif" id="userphoto" width="58" height="58" />
+															</a>
+														</p>
+														<a href="javascript:void(0);" onclick="docTalk();wzhitnew(106);" class="user_talk" title="与TA对话"></a>
+													</div>
+													<div class="user_data f_right">
+														<div class="user_data_name">
+															<a href="http://www.360doc.com/userhome/2792772" id="nickname" target="_blank" onclick="wzhitnew(29);">小小小舟</a>
+															<img src="http://pubimage.360doc.com/NewArticle/user_name_tag.gif" alt="图书馆" />
+														</div>
+														<p id="userdegree"><img src='http://pubimage.360doc.com/NewArticle/userstar2.gif' /><img src='http://pubimage.360doc.com/NewArticle/userstar3.gif' /><img src='http://pubimage.360doc.com/NewArticle/userstar3.gif' /><img src='http://pubimage.360doc.com/NewArticle/userstar3.gif' /><img src='http://pubimage.360doc.com/NewArticle/userstar3.gif' /></p>
+														<div class="user_data_num">
+															<a id="spanfollowstatus" class="gz_no"></a>
+															<script type="text/javascript">isfollow(2792772);</script>
+															<span id="follownum">3</span>&nbsp;&nbsp;&nbsp;&nbsp;
+															<span>馆藏</span>&nbsp;<span id="artnum">48</span>
+														</div>
+													</div>
+												</div>
+												<div class="his_her"><ul class='his_her_type'><li class='f_left curone'>TA的最新馆藏</li></ul><div class='his_her_div' style="height:190px;"><ul class='his_her_list'><li><div><span></span><a href=http://www.360doc.com/content/15/1126/14/2792772_516043983.shtml target=_blank onclick='wzhitnew(51)'>android 沉浸式状态栏(像ios那样的状态栏与应用统一颜色样式)</a></div><div><span></span><a href=http://www.360doc.com/content/15/1116/10/2792772_513527136.shtml target=_blank onclick='wzhitnew(51)'>Android属性动画：动画流控制</a></div><div><span></span><a href=http://www.360doc.com/content/15/1109/10/2792772_511835848.shtml target=_blank onclick='wzhitnew(51)'>Android动画学习笔记</a></div><div><span></span><a href=http://www.360doc.com/content/15/1106/14/2792772_511196322.shtml target=_blank onclick='wzhitnew(51)'>drawable文件夹详解</a></div><div><span></span><a href=http://www.360doc.com/content/15/1103/10/2792772_510388539.shtml target=_blank onclick='wzhitnew(51)'>Android开发：shape和selector和layer</a></div><div><span></span><a href=http://www.360doc.com/content/15/1030/14/2792772_509442313.shtml target=_blank onclick='wzhitnew(51)'>Android的selector，背景选择器</a></div></li></ul></div></div>
+												<div class="both" style="padding-top: 10px; height: 260px;">
+													<iframe id="ifartad1" height="250px" width="250px" frameborder="0" scrolling="no"></iframe>
+													<div style="height: 10px;">
+													</div>
+												</div>
+												<div class="his_her" id="recommendArt" style="margin-top: 5px;">
+													<div class="str_border" style="margin: 0;">
+														<span style="font-size: 14px; float: left;">推荐阅读</span>
+														<a style="float: right;" class="a_more" onclick="wzhitnew(32)" href="http://www.360doc.com/readroom.html" target="_blank">更多</a>
+													</div>
+													<div class='his_her_div' style="height: 264px;">
+														<ul class='his_her_list'>
+															<li id="recommendArtLists"></li>
+														</ul>
+													</div>
+												</div>
+												<div class="both" style="padding-top: 10px;">
+													<iframe id="ifartad2" height="250" width="250" frameborder="0" scrolling="no"></iframe>
+												</div>
+												<br />
+												<iframe id="ifartrightsogou" height="190" width="250" frameborder="0" scrolling="no"></iframe>
+												<div class="both" id="divad5" style="padding-top: 11px; zoom: 1; width: 300px;">
+													<div id="divad4" style="display: none;">
+														<div>
+															<iframe id="ifartad" height="250px" width="250px" frameborder="0" scrolling="no"></iframe>
+														</div>
+														<div class="ggwz">
+															<a href="javascript:void(0);" onclick="closead(2);">关闭</a>
+														</div>
+														<div style="height: 13px;">
+														</div>
+													</div>
+													<div style="clear: both; display: none;" id="divad6">
+														<div id="adfloatbaidu">
+															<iframe id="ifartadfloadbaidu" height="250px" width="250px" frameborder="0" scrolling="no"></iframe>
+														</div>
+														<div class="ggwz" style="left: 25px;">
+															<a href="javascript:void(0);" onclick="closead(3);">关闭</a>
+														</div>
+														<div style="height: 13px;">
+														</div>
+													</div>
+													<div style="height: 75px;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<p class="clearboth"></p>
+										<input type="hidden" id="docarttitle" value="css3%ef%bc%9aborder-image%e8%be%b9%e6%a1%86%e5%9b%be%e5%83%8f%e8%af%a6%e8%a7%a3" />
+										<input type="hidden" id="firstartid" value="417403574" />
+										<input type="hidden" id="artreadroomid" value="0" />
+										<script src="http://www.360doc.com/js/StickySystem20160414.js?t=20160502401" type="text/javascript" charset="utf-8"></script>
+										<script>GerLookingUserInfo(1,2792772,1,0,'-1',-1,10,0);OutputSource('http%3a%2f%2fwww.qianduan.net%2fcss3border-image-bian-kuang-tu-xiang-xiang-jie.html','');OutputCategory(2792772,5,'%e3%80%8acss%e3%80%8b');OutputLastNextArt('%e9%ab%98%e6%80%a7%e8%83%bd+CSS3+%e5%8a%a8%e7%94%bb%e5%89%8d%e7%ab%af%e8%a7%82%e5%af%9f+%7c+CSS+%7c+%e5%89%8d%e7%ab%af%e8%a7%82%e5%af%9f','http://www.360doc.com/content/14/1013/16/2792772_416586087.shtml',0);OutputLastNextArt('%e6%b5%85%e8%b0%88CSS3+Filter%e7%9a%8410%e7%a7%8d%e7%89%b9%e6%95%88','http://www.360doc.com/content/15/0902/14/2792772_496458062.shtml',1);</script>
+									</body>
+									</html>
